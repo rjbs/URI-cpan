@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-package URI::cpan::dist;
+package URI::cpan::module;
 use base qw(URI::cpan);
 use Carp ();
 

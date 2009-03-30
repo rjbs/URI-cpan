@@ -10,12 +10,15 @@ use URI::cpan::dist;
 use URI::cpan::package;
 
 my %type_class = (
-  author  => 'URI::cpan::author',
-  dist    => 'URI::cpan::dist',
+  author   => 'URI::cpan::author',
+  distfile => 'URI::cpan::distfile',
 
-  # This will be uncommented when we figure out what the heck to do with it.
+  # These will be uncommented when we figure out what the heck to do with them.
   # -- rjbs, 2009-03-30
+  #
+  # dist    => 'URI::cpan::dist',
   # package => 'URI::cpan::package',
+  # module  => 'URI::cpan::module',
 );
 
 sub _init {
@@ -25,7 +28,7 @@ sub _init {
   # In the future, we'll want to support "private" CPAN.  Probably when that
   # happens we will want to assert $self->authority eq $self->host.
   # -- rjbs, 2009-03-29
-  Carp::croak "invalid cpan URI: non-empty authority not supported"
+  Carp::croak "invalid cpan URI: non-empty authority not yet supported"
     if $self->authority;
 
   Carp::croak "invalid cpan URI: non-empty query string not supported"
