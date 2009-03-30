@@ -3,7 +3,8 @@ use warnings;
 
 package URI::cpan::author;
 use base qw(URI::cpan);
-use Carp ();
+
+our $VERSION = '1.000';
 
 sub validate {
   my ($self) = @_;

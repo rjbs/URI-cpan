@@ -3,8 +3,36 @@ use warnings;
 
 package URI::cpan;
 use base qw(URI::_generic);
-use Carp ();
 
+our $VERSION = '1.000';
+
+=head1 NAME
+
+URI::cpan - URLs that refer to things on the CPAN
+
+=head1 SYNOPSIS
+
+  use URI::cpan;
+
+  my $uri = URI->new('cpan:///distfile/RJBS/URI-cpan-1.000.tar.gz');
+
+  $uri->author;       # => RJBS
+  $uri->dist_name;    # => URI-cpan
+  $uri->dist_version; # => 1.000
+
+Other forms of cpan: URI include:
+
+  cpan:///author/RJBS
+
+Reserved for likely future use are:
+
+  cpan:///dist
+  cpan:///module
+  cpan:///package
+
+=cut
+
+use Carp ();
 use URI::cpan::author;
 use URI::cpan::dist;
 use URI::cpan::package;
@@ -56,5 +84,29 @@ sub _p_rel {
   $path =~ s{^/\w+/}{};
   return $path;
 }
+
+=head1 WARNINGS
+
+URI objects are difficult to subclass, so I have not (yet?) taken the time to
+remove mutability from the objects.  This means that you can probably alter a
+URI::cpan object into a state where it is no longer valid.
+
+Please don't change the contents of these objects after construction.
+
+=head1 SEE ALSO
+
+L<URI::cpan::author> and L<URI::cpan::distfile>
+
+=head1 THANKS
+
+This code is derived from code written at Pobox.com by Hans Dieter Pearcey.
+Dieter helped thrash out this new implementation, too.
+
+=head1 COPYRIGHT
+
+Copyright 2009 Ricardo SIGNES.  This program is free software;  you can
+redistribute it and/or modify it under the same terms as Perl itself.
+
+=cut
 
 1;
