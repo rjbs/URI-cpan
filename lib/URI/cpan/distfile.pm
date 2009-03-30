@@ -4,7 +4,7 @@ use warnings;
 package URI::cpan::distfile;
 use base qw(URI::cpan);
 
-our $VERSION = '1.000';
+our $VERSION = '1.001';
 
 use Carp ();
 use CPAN::DistnameInfo;
