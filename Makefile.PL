@@ -8,7 +8,8 @@ WriteMakefile(
   VERSION_FROM  => 'lib/URI/cpan.pm',
   (eval { ExtUtils::MakeMaker->VERSION(6.21) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM => {
-    'URI'         => 0, # minimum version
+    'URI'                => 0, # minimum version unknown
+    'CPAN::DistnameInfo' => 0, # minimum version unknown
   },
   (eval { ExtUtils::MakeMaker->VERSION(6.46) }
     ? (META_MERGE => {
