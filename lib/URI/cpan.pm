@@ -4,7 +4,7 @@ use warnings;
 package URI::cpan;
 use base qw(URI::_generic);
 
-our $VERSION = '1.002';
+our $VERSION = '1.003';
 
 =head1 NAME
 
