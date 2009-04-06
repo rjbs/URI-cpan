@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More tests => 10;
+use Test::More tests => 14;
 use URI;
 use URI::cpan;
 
@@ -8,6 +8,15 @@ use URI::cpan;
   my $url = URI->new('cpan:///distfile/RJBS/URI-cpan-1.00.tar.gz');
 
   isa_ok($url, 'URI::cpan::distfile', 'distfile with ver');
+  is($url->author,       'RJBS',     "we can extract author");
+  is($url->dist_name,    'URI-cpan', "we can extract dist_name");
+  is($url->dist_version, '1.00',     "we can extract dist_version");
+}
+
+{
+  my $url = URI->new('cpan:///distfile/RJBS/deep/path/URI-cpan-1.00.tar.gz');
+
+  isa_ok($url, 'URI::cpan::distfile', 'distfile with path and ver');
   is($url->author,       'RJBS',     "we can extract author");
   is($url->dist_name,    'URI-cpan', "we can extract dist_name");
   is($url->dist_version, '1.00',     "we can extract dist_version");
