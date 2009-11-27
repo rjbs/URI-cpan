@@ -1,4 +1,7 @@
 Revision history for URI-cpan
 
+1.004     2009-11-27
+          cope with author names with - or 0-9 in them (RT #52130)
+
 1.003     2009-04-05
           cope with distfile URI that have deep paths to the distfile

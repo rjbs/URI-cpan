@@ -4,7 +4,7 @@ use warnings;
 package URI::cpan::distfile;
 use base qw(URI::cpan);
 
-our $VERSION = '1.003';
+our $VERSION = '1.004';
 
 use Carp ();
 use CPAN::DistnameInfo;
@@ -28,7 +28,7 @@ sub validate {
   my (undef, undef, $author, $filename) = split m{/}, $self->path, 4;
 
   Carp::croak "invalid cpan URI: invalid author part in $self"
-    unless $author =~ m{\A[A-Z]+\z};
+    unless $author =~ m{\A[A-Z][-0-9A-Z]*\z};
 }
 
 =head1 dist_name
