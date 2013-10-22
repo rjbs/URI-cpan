@@ -1,14 +1,9 @@
 use strict;
 use warnings;
+# ABSTRACT: URLs that refer to things on the CPAN
 
 package URI::cpan;
-use base qw(URI::_generic);
-
-our $VERSION = '1.004';
-
-=head1 NAME
-
-URI::cpan - URLs that refer to things on the CPAN
+use parent qw(URI::_generic);
 
 =head1 SYNOPSIS
 
@@ -104,11 +99,6 @@ L<URI::cpan::author> and L<URI::cpan::distfile>
 
 This code is derived from code written at Pobox.com by Hans Dieter Pearcey.
 Dieter helped thrash out this new implementation, too.
-
-=head1 COPYRIGHT
-
-Copyright 2009 Ricardo SIGNES.  This program is free software;  you can
-redistribute it and/or modify it under the same terms as Perl itself.
 
 =cut
 

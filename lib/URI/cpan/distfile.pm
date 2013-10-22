@@ -2,16 +2,11 @@ use strict;
 use warnings;
 
 package URI::cpan::distfile;
-use base qw(URI::cpan);
-
-our $VERSION = '1.004';
+use parent qw(URI::cpan);
+# ABSTRACT: cpan:///distfile/AUTHOR/Dist-1.234.tar.gz
 
 use Carp ();
 use CPAN::DistnameInfo;
-
-=head1 NAME
-
-URI::cpan::distfile - cpan:///distfile/AUTHOR/Dist-1.234.tar.gz
 
 =head1 SYNOPSIS
 
