@@ -1,5 +1,11 @@
 Revision history for URI-cpan
 
+{{$NEXT}}
+
+1.005     2013-10-21 22:11:42 America/New_York
+        - update bugtracker and repo metadata
+        - switch from base to parent
+
 1.004     2009-11-27
           cope with author names with - or 0-9 in them (RT #52130)
 
