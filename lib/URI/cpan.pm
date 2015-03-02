@@ -1,8 +1,9 @@
 use strict;
 use warnings;
-# ABSTRACT: URLs that refer to things on the CPAN
 
 package URI::cpan;
+# ABSTRACT: URLs that refer to things on the CPAN
+
 use parent qw(URI::_generic);
 
 =head1 SYNOPSIS

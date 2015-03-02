@@ -2,8 +2,9 @@ use strict;
 use warnings;
 
 package URI::cpan::distfile;
-use parent qw(URI::cpan);
 # ABSTRACT: cpan:///distfile/AUTHOR/Dist-1.234.tar.gz
+
+use parent qw(URI::cpan);
 
 use Carp ();
 use CPAN::DistnameInfo;

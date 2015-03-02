@@ -2,6 +2,7 @@ use strict;
 use warnings;
 
 package URI::cpan::author;
+
 use parent qw(URI::cpan);
 
 sub validate {
