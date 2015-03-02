@@ -54,6 +54,18 @@ sub dist_version {
   CPAN::DistnameInfo->new($self->_p_rel)->version;
 }
 
+=head1 dist_filepath
+
+This returns the path to the dist file.  This is the whole URL after the
+C<distfile> part.
+
+=cut
+
+sub dist_filepath {
+  my ($self) = @_;
+  $self->_p_rel;
+}
+
 =head1 author
 
 This returns the name of the author whose file is referred to.

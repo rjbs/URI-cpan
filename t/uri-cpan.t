@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More tests => 14;
+use Test::More tests => 15;
 use URI;
 use URI::cpan;
 
@@ -11,6 +11,8 @@ use URI::cpan;
   is($url->author,       'RJBS',     "we can extract author");
   is($url->dist_name,    'URI-cpan', "we can extract dist_name");
   is($url->dist_version, '1.00',     "we can extract dist_version");
+  is($url->dist_filepath, 'RJBS/URI-cpan-1.00.tar.gz',
+                          "we can extract dist_filepath");
 }
 
 {
