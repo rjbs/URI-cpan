@@ -2,6 +2,10 @@ Revision history for URI-cpan
 
 {{$NEXT}}
 
+1.006     2015-03-02 20:40:13-05:00 America/New_York
+        - added $distfile_uri->dist_filepath to get the full path for the
+          distfile
+
 1.005     2013-10-21 22:11:42 America/New_York
         - update bugtracker and repo metadata
         - switch from base to parent
