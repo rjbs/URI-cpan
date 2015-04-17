@@ -52,12 +52,6 @@ sub _init {
   my $self = shift->SUPER::_init(@_);
   my $class = ref($self);
 
-  # In the future, we'll want to support "private" CPAN.  Probably when that
-  # happens we will want to assert $self->authority eq $self->host.
-  # -- rjbs, 2009-03-29
-  Carp::croak "invalid cpan URI: non-empty authority not yet supported"
-    if $self->authority;
-
   Carp::croak "invalid cpan URI: non-empty query string not supported"
     if $self->query;
 

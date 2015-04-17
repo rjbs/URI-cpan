@@ -1,6 +1,8 @@
 Revision history for URI-cpan
 
 {{$NEXT}}
+        - allow authority section in uri (the "local" in
+          cpan://local/author/BOB)
 
 1.006     2015-03-02 20:40:13-05:00 America/New_York
         - added $distfile_uri->dist_filepath to get the full path for the
